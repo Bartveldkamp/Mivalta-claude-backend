@@ -12,9 +12,10 @@ async def josi_endpoint(request: Request):
     prompt = data.get("prompt", "")
 
     headers = {
-        "x-api-key": API_KEY,
-        "content-type": "application/json"
-    }
+    "x-api-key": API_KEY,
+    "content-type": "application/json",
+    "anthropic-version": "2023-06-01"
+}
 
     payload = {
         "model": "claude-3-opus-20240229",
